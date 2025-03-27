@@ -138,7 +138,7 @@ async def start_command(client: Client, message: Message):
 
         if FILE_AUTO_DELETE > 0:
             notification_msg = await message.reply(
-                f"<b>This file will be deleted in {get_exp_time(FILE_AUTO_DELETE)}. Please save or forward it to your saved messages before it gets deleted.</b>"
+                f"<b><b>❗️ <u>IMPORTANT</u> ❗️</b><blockquote>\n\nThis Video / File Will Be Deleted In {FILE_AUTO_DELETE} (Due To Copyright Issues).\n\n📌 Please Forward This Video / File To Somewhere Else And Start Downloading There.</blockquote></b>"
             )
 
             await asyncio.sleep(FILE_AUTO_DELETE)
@@ -205,7 +205,7 @@ async def not_joined(client: Client, message: Message):
     # Check if the first and second channels are both set
     if FORCE_SUB_CHANNEL1 and FORCE_SUB_CHANNEL2:
         buttons.append([
-            InlineKeyboardButton(text="• ᴊᴏɪɴ ᴄʜᴀɴɴᴇʟ", url=client.invitelink1),
+            InlineKeyboardButton(text="• ᴊᴏɪɴ ᴄʜᴀɴɴᴇʟ 1", url=client.invitelink1),
             InlineKeyboardButton(text="ᴊᴏɪɴ ᴄʜᴀɴɴᴇʟ •", url=client.invitelink2),
         ])
     # Check if only the first channel is set
@@ -216,13 +216,13 @@ async def not_joined(client: Client, message: Message):
     # Check if only the second channel is set
     elif FORCE_SUB_CHANNEL2:
         buttons.append([
-            InlineKeyboardButton(text="• ᴊᴏɪɴ ᴄʜᴀɴɴᴇʟ•", url=client.invitelink2)
+            InlineKeyboardButton(text="• ᴊᴏɪɴ ᴄʜᴀɴɴᴇʟ 2•", url=client.invitelink2)
         ])
 
     # Check if the third and fourth channels are set
     if FORCE_SUB_CHANNEL3 and FORCE_SUB_CHANNEL4:
         buttons.append([
-            InlineKeyboardButton(text="• ᴊᴏɪɴ ᴄʜᴀɴɴᴇʟ", url=client.invitelink3),
+            InlineKeyboardButton(text="• ᴊᴏɪɴ ᴄʜᴀɴɴᴇʟ 3", url=client.invitelink3),
             InlineKeyboardButton(text="ᴊᴏɪɴ ᴄʜᴀɴɴᴇʟ •", url=client.invitelink4),
         ])
     # Check if only the first channel is set
