@@ -138,7 +138,7 @@ async def start_command(client: Client, message: Message):
 
         if FILE_AUTO_DELETE > 0:
             notification_msg = await message.reply(
-                f"<b><b>❗️ <u>IMPORTANT</u> ❗️</b><blockquote>\n\nThis Video / File Will Be Deleted In {FILE_AUTO_DELETE} (Due To Copyright Issues).\n\n📌 Please Forward This Video / File To Somewhere Else And Start Downloading There.</blockquote></b>"
+                f"<b><blockquote>❗️ <u>IMPORTANT</u> ❗️\n\nThis Video / File Will Be Deleted In {FILE_AUTO_DELETE} (Due To Copyright Issues).\n\n📌 Please Forward This Video / File To Somewhere Else And Start Downloading There.</blockquote></b>"
             )
 
             await asyncio.sleep(FILE_AUTO_DELETE)
