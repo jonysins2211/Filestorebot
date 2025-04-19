@@ -87,15 +87,13 @@ async def encode(string):
     return base64_string
     
 async def decode(base64_string):
-    try:
-        base64_string = base64_string.strip("=")
-        base64_bytes = (base64_string + "=" * (-len(base64_string) % 4)).encode("ascii")
-        string_bytes = base64.urlsafe_b64decode(base64_bytes)
-        string = string_bytes.decode("utf-8")
-        return string
-    except (base64.binascii.Error, UnicodeDecodeError) as e:
-        return "Invalid or corrupted link"
-
+    base64_string = base64_string.strip("=")
+    base64_bytes = (base64_string + "=" * (-len(base64_string) % 4)).encode("ascii")
+    string_bytes = base64.urlsafe_b64decode(base64_bytes)
+    string = string_bytes.decode("utf-8")
+return string
+except (base64.binascii.Error, UnicodeDecodeError) as e:
+return "Invalid or corrupted link"
 
 async def get_messages(client, message_ids):
     messages = []
@@ -105,7 +103,7 @@ async def get_messages(client, message_ids):
         try:
             msgs = await client.get_messages(
                 chat_id=client.db_channel.id,
-                message_ids=temb_ids
+               l message_ids=temb_ids
             )
         except FloodWait as e:
             await asyncio.sleep(e.x)
