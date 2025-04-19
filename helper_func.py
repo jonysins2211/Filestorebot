@@ -87,14 +87,12 @@ async def encode(string):
     return base64_string
     
 async def decode(base64_string):
-    base64_string = base64_string.strip("=")
-    base64_bytes = (base64_string + "=" * (-len(base64_string) % 4)).encode("ascii")
-    string_bytes = base64.urlsafe_b64decode(base64_bytes)
-    string = string_bytes.decode("utf-8")
-return string
-except (base64.binascii.Error, UnicodeDecodeError) as e:
-return "Invalid or corrupted link"
-
+    base64_string = base64_string.strip("=")
+    base64_bytes = (base64_string + "=" * (-len(base64_string) % 4)).encode("ascii")
+    string_bytes = base64.urlsafe_b64decode(base64_bytes)
+    string = string_bytes.decode("ascii")
+    return string
+    
 async def get_messages(client, message_ids):
     messages = []
     total_messages = 0
