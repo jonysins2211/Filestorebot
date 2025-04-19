@@ -24,8 +24,8 @@ OWNER_ID = int(os.environ.get("OWNER_ID", "949657126"))
 #Port
 PORT = os.environ.get("PORT", "8080")
 #Database
-DB_URI = os.environ.get("DATABASE_URL", "mongodb+srv://maxine11229:2d0NThJZDM9iSu48@cluster0.9qvbj.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
-DB_NAME = os.environ.get("DATABASE_NAME", "maxine11229")
+DB_URI = os.environ.get("DATABASE_URL", "mongodb+srv://johnmawa:2.de5ckkYQVC#8f@cluster0.haayhop.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
+DB_NAME = os.environ.get("DATABASE_NAME", "johnmawa")
 
 #Time in seconds for message delete, put 0 to never delete
 TIME = int(os.environ.get("TIME", "3600"))
@@ -35,7 +35,7 @@ TIME = int(os.environ.get("TIME", "3600"))
 FORCE_SUB_CHANNEL1 = int(os.environ.get("FORCE_SUB_CHANNEL1", "-1001948532295"))
 #put 0 to disable
 FORCE_SUB_CHANNEL2 = int(os.environ.get("FORCE_SUB_CHANNEL2", "-1001622914589"))#put 0 to disable
-FORCE_SUB_CHANNEL3 = int(os.environ.get("FORCE_SUB_CHANNEL3", "-1002237171878"))#put 0 to disable
+FORCE_SUB_CHANNEL3 = int(os.environ.get("FORCE_SUB_CHANNEL3", "0"))#put 0 to disable
 FORCE_SUB_CHANNEL4 = int(os.environ.get("FORCE_SUB_CHANNEL4", "0"))#put 0 to disable
 
 TG_BOT_WORKERS = int(os.environ.get("TG_BOT_WORKERS", "4"))
@@ -68,7 +68,7 @@ except ValueError:
         raise Exception("Your Admins list does not contain valid integers.")
 
 #Force sub message 
-FORCE_MSG = os.environ.get("FORCE_SUB_MESSAGE", "𝐒𝐨𝐫𝐫𝐲 {first} Y𝐨𝐮 𝐡𝐚𝐯𝐞 𝐭𝐨 𝐣𝐨𝐢𝐧 𝐦𝐲 𝐜𝐡𝐚𝐧𝐧𝐞𝐥𝐬 𝐟𝐢𝐫𝐬𝐭 𝐭𝐨 𝐚𝐜𝐜𝐞𝐬𝐬 𝐟𝐢𝐥𝐞𝐬..𝐒𝐨 𝐩𝐥𝐞𝐚𝐬𝐞 J𝐨𝐢𝐧 𝐦𝐲 3 𝐜𝐡𝐚𝐧𝐧𝐞𝐥𝐬 𝐟𝐢𝐫𝐬𝐭 𝐚𝐧𝐝 𝐜𝐥𝐢𝐜𝐤 𝐨𝐧 “Reload” 𝐛𝐮𝐭𝐭𝐨𝐧....!\n\n<blockquote><b>మీరు ఈ క్రింద ఉన్న 3 ఛానల్స్ లో జాయిన్ అవ్వాలి.. Join అయిన తర్వాత ' Reload ' Click చేస్తే File వస్తుంది</b></blockquote>")
+FORCE_MSG = os.environ.get("FORCE_SUB_MESSAGE", "𝐒𝐨𝐫𝐫𝐲 {first} Y𝐨𝐮 𝐡𝐚𝐯𝐞 𝐭𝐨 𝐣𝐨𝐢𝐧 𝐦𝐲 𝐜𝐡𝐚𝐧𝐧𝐞𝐥𝐬 𝐟𝐢𝐫𝐬𝐭 𝐭𝐨 𝐚𝐜𝐜𝐞𝐬𝐬 𝐟𝐢𝐥𝐞𝐬..𝐒𝐨 𝐩𝐥𝐞𝐚𝐬𝐞 J𝐨𝐢𝐧 𝐦𝐲 2 𝐜𝐡𝐚𝐧𝐧𝐞𝐥𝐬 𝐟𝐢𝐫𝐬𝐭 𝐚𝐧𝐝 𝐜𝐥𝐢𝐜𝐤 𝐨𝐧 “Reload” 𝐛𝐮𝐭𝐭𝐨𝐧....!\n\n<blockquote><b>మీరు ఈ క్రింద ఉన్న 2 ఛానల్స్ లో జాయిన్ అవ్వాలి.. Join అయిన తర్వాత ' Reload ' Click చేస్తే File వస్తుంది</b></blockquote>")
 
 #set your Custom Caption here, Keep None for Disable Custom Caption
 CUSTOM_CAPTION = os.environ.get("CUSTOM_CAPTION", "{previouscaption} \n\n<blockquote><b>Forward this File to @MlFiletoLinkbot \nTo Get Fast Download & Online Streaming Links 🚀⚡️</b></blockquote>")
